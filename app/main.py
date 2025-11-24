@@ -28,13 +28,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Startup event to create directories
-@app.on_event("startup")
-async def startup_event():
-    """Create necessary directories on startup"""
-    os.makedirs("data_cache", exist_ok=True)
-    os.makedirs("logs", exist_ok=True)
-
 # Include routers
 app.include_router(stock_data.router, prefix="/api/v1/stock", tags=["Stock Data"])
 app.include_router(technical.router, prefix="/api/v1/indicators", tags=["Technical Indicators"])
