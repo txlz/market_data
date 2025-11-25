@@ -1,0 +1,222 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "AAPL",
+    "start_date": "2025-10-26",
+    "end_date": "2025-11-25",
+    "total_records": 21,
+    "data": [
+      {
+        "Date": "2025-10-27",
+        "Open": 264.62,
+        "High": 268.86,
+        "Low": 264.39,
+        "Close": 268.55,
+        "Volume": 44888200,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-10-28",
+        "Open": 268.73,
+        "High": 269.63,
+        "Low": 267.89,
+        "Close": 268.74,
+        "Volume": 41534800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-10-29",
+        "Open": 269.02,
+        "High": 271.15,
+        "Low": 266.85,
+        "Close": 269.44,
+        "Volume": 51086700,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-10-30",
+        "Open": 271.73,
+        "High": 273.87,
+        "Low": 268.22,
+        "Close": 271.14,
+        "Volume": 69886500,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-10-31",
+        "Open": 276.72,
+        "High": 277.05,
+        "Low": 268.9,
+        "Close": 270.11,
+        "Volume": 86167100,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-03",
+        "Open": 270.16,
+        "High": 270.59,
+        "Low": 265.99,
+        "Close": 268.79,
+        "Volume": 50194600,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-04",
+        "Open": 268.07,
+        "High": 271.23,
+        "Low": 267.36,
+        "Close": 269.78,
+        "Volume": 49274800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-05",
+        "Open": 268.35,
+        "High": 271.44,
+        "Low": 266.67,
+        "Close": 269.88,
+        "Volume": 43683100,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-06",
+        "Open": 267.63,
+        "High": 273.14,
+        "Low": 267.63,
+        "Close": 269.51,
+        "Volume": 51204000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-07",
+        "Open": 269.54,
+        "High": 272.03,
+        "Low": 266.51,
+        "Close": 268.21,
+        "Volume": 48227400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-10",
+        "Open": 268.96,
+        "High": 273.73,
+        "Low": 267.46,
+        "Close": 269.43,
+        "Volume": 41312400,
+        "Dividends": 0.26,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-11",
+        "Open": 269.81,
+        "High": 275.91,
+        "Low": 269.8,
+        "Close": 275.25,
+        "Volume": 46208300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-12",
+        "Open": 275.0,
+        "High": 275.73,
+        "Low": 271.7,
+        "Close": 273.47,
+        "Volume": 48398000,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-13",
+        "Open": 274.11,
+        "High": 276.7,
+        "Low": 272.09,
+        "Close": 272.95,
+        "Volume": 49602800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-14",
+        "Open": 271.05,
+        "High": 275.96,
+        "Low": 269.6,
+        "Close": 272.41,
+        "Volume": 47431300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-17",
+        "Open": 268.82,
+        "High": 270.49,
+        "Low": 265.73,
+        "Close": 267.46,
+        "Volume": 45018300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-18",
+        "Open": 269.99,
+        "High": 270.71,
+        "Low": 265.32,
+        "Close": 267.44,
+        "Volume": 45677300,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-19",
+        "Open": 265.53,
+        "High": 272.21,
+        "Low": 265.5,
+        "Close": 268.56,
+        "Volume": 40424500,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-20",
+        "Open": 270.83,
+        "High": 275.43,
+        "Low": 265.92,
+        "Close": 266.25,
+        "Volume": 45823600,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-21",
+        "Open": 265.95,
+        "High": 273.33,
+        "Low": 265.67,
+        "Close": 271.49,
+        "Volume": 59030800,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      },
+      {
+        "Date": "2025-11-24",
+        "Open": 270.9,
+        "High": 277.0,
+        "Low": 270.9,
+        "Close": 275.92,
+        "Volume": 65504400,
+        "Dividends": 0.0,
+        "Stock Splits": 0.0
+      }
+    ]
+  },
+  "status_code": 200
+}

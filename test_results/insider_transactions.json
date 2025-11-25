@@ -1,0 +1,5 @@
+{
+  "success": false,
+  "error": "500 Server Error: Internal Server Error for url: http://localhost:8000/api/v1/company/AAPL/insider-transactions",
+  "status_code": 500
+}

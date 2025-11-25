@@ -4,9 +4,11 @@ Endpoints for company information and insider data
 """
 
 from fastapi import APIRouter, HTTPException, Path
+import yfinance as yf
 
 from app.core.y_finance import get_insider_transactions
 from app.core.yfin_utils import YFinanceUtils
+from app.core.json_utils import dataframe_to_json
 
 router = APIRouter()
 
@@ -48,14 +50,23 @@ async def get_insider_trades(symbol: str = Path(..., description="Stock ticker s
     Returns: Recent insider trading activity including purchases and sales
     """
     try:
-        result = get_insider_transactions(symbol)
+        # Get data directly from yfinance
+        ticker_obj = yf.Ticker(symbol.upper())
+        data = ticker_obj.insider_transactions
         
-        if "No insider transactions data" in result:
-            raise HTTPException(status_code=404, detail=result)
+        if data is None or data.empty:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No insider transactions data found for symbol '{symbol}'"
+            )
+        
+        # Convert to structured JSON
+        data_json = dataframe_to_json(data)
         
         return {
             "symbol": symbol.upper(),
-            "data": result
+            "total_transactions": len(data_json),
+            "transactions": data_json
         }
     except Exception as e:
         raise HTTPException(

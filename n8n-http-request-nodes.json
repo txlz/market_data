@@ -1,0 +1,280 @@
+{
+  "name": "Market Data API - n8n HTTP Requests",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "API Root Info",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [250, 300],
+      "description": "Get API information"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/health",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Health Check",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 300],
+      "description": "API health status check"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/stock/{{ $json.symbol }}/history",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "start_date",
+              "value": "={{ $json.start_date }}"
+            },
+            {
+              "name": "end_date",
+              "value": "={{ $json.end_date }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get Stock History",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [250, 500],
+      "description": "Get historical stock price data. Required: symbol (e.g., 'AAPL'), start_date (YYYY-MM-DD), end_date (YYYY-MM-DD)"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/stock/{{ $json.symbol }}/info",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Get Stock Info",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 500],
+      "description": "Get detailed stock information. Required: symbol (e.g., 'AAPL')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/stock/{{ $json.symbol }}/dividends",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Get Dividends",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 500],
+      "description": "Get dividend history. Required: symbol (e.g., 'AAPL')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/indicators/list",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "List All Indicators",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [250, 700],
+      "description": "List all available technical indicators with descriptions"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/indicators/{{ $json.symbol }}/{{ $json.indicator }}",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "date",
+              "value": "={{ $json.date }}"
+            },
+            {
+              "name": "lookback_days",
+              "value": "={{ $json.lookback_days || 10 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get Single Indicator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 700],
+      "description": "Get specific technical indicator. Required: symbol, indicator (e.g., 'rsi', 'macd'), date (YYYY-MM-DD). Optional: lookback_days (default: 10)"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/indicators/{{ $json.symbol }}/all",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "date",
+              "value": "={{ $json.date }}"
+            },
+            {
+              "name": "lookback_days",
+              "value": "={{ $json.lookback_days || 10 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get All Indicators",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 700],
+      "description": "Get all technical indicators for a symbol. Required: symbol, date (YYYY-MM-DD). Optional: lookback_days (default: 10)"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/fundamentals/{{ $json.symbol }}/balance-sheet",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "frequency",
+              "value": "={{ $json.frequency || 'quarterly' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get Balance Sheet",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [250, 900],
+      "description": "Get balance sheet data. Required: symbol. Optional: frequency ('annual' or 'quarterly', default: 'quarterly')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/fundamentals/{{ $json.symbol }}/income-statement",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "frequency",
+              "value": "={{ $json.frequency || 'quarterly' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get Income Statement",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 900],
+      "description": "Get income statement data. Required: symbol. Optional: frequency ('annual' or 'quarterly', default: 'quarterly')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/fundamentals/{{ $json.symbol }}/cashflow",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "frequency",
+              "value": "={{ $json.frequency || 'quarterly' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get Cash Flow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 900],
+      "description": "Get cash flow statement data. Required: symbol. Optional: frequency ('annual' or 'quarterly', default: 'quarterly')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/fundamentals/{{ $json.symbol }}/all",
+        "method": "GET",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "frequency",
+              "value": "={{ $json.frequency || 'quarterly' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Get All Fundamentals",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [850, 900],
+      "description": "Get all fundamental financial statements. Required: symbol. Optional: frequency ('annual' or 'quarterly', default: 'quarterly')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/company/{{ $json.symbol }}/info",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Get Company Info",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [250, 1100],
+      "description": "Get detailed company information. Required: symbol (e.g., 'AAPL')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/company/{{ $json.symbol }}/insider-transactions",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Get Insider Transactions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 1100],
+      "description": "Get insider transaction data. Required: symbol (e.g., 'AAPL')"
+    },
+    {
+      "parameters": {
+        "url": "https://market-data-c60q.onrender.com/api/v1/company/{{ $json.symbol }}/analyst-recommendations",
+        "method": "GET",
+        "options": {}
+      },
+      "name": "Get Analyst Recommendations",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 1100],
+      "description": "Get analyst recommendations. Required: symbol (e.g., 'AAPL')"
+    }
+  ],
+  "metadata": {
+    "api_base_url": "https://market-data-c60q.onrender.com",
+    "version": "1.0.0",
+    "description": "n8n HTTP Request nodes for Market Data API",
+    "supported_indicators": [
+      "close_50_sma",
+      "close_200_sma",
+      "close_10_ema",
+      "macd",
+      "macds",
+      "macdh",
+      "rsi",
+      "boll",
+      "boll_ub",
+      "boll_lb",
+      "atr",
+      "vwma",
+      "mfi"
+    ]
+  }
+}

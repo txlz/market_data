@@ -1,0 +1,769 @@
+{
+  "close_50_sma": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "close_50_sma",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "close_50_sma values from 2025-11-14 to 2025-11-24:",
+      "description": "50 SMA: A medium-term trend indicator. Usage: Identify trend direction and serve as dynamic support/resistance. Tips: It lags price; combine with faster indicators for timely signals.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 260.0780673217773
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 259.28908233642574
+        },
+        {
+          "date": "2025-11-20",
+          "value": 258.5361489868164
+        },
+        {
+          "date": "2025-11-19",
+          "value": 257.80729339599606
+        },
+        {
+          "date": "2025-11-18",
+          "value": 256.9675006103516
+        },
+        {
+          "date": "2025-11-17",
+          "value": 256.30116149902346
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 255.70495422363283
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "close_200_sma": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "close_200_sma",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "close_200_sma values from 2025-11-14 to 2025-11-24:",
+      "description": "200 SMA: A long-term trend benchmark. Usage: Confirm overall market trend and identify golden/death cross setups. Tips: It reacts slowly; best for strategic trend confirmation rather than frequent trading entries.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 226.06634712219238
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 225.8197727203369
+        },
+        {
+          "date": "2025-11-20",
+          "value": 225.62317253112792
+        },
+        {
+          "date": "2025-11-19",
+          "value": 225.44903923034667
+        },
+        {
+          "date": "2025-11-18",
+          "value": 225.2649984741211
+        },
+        {
+          "date": "2025-11-17",
+          "value": 225.0627155303955
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 224.90010276794433
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "close_10_ema": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "close_10_ema",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "close_10_ema values from 2025-11-14 to 2025-11-24:",
+      "description": "10 EMA: A responsive short-term average. Usage: Capture quick shifts in momentum and potential entry points. Tips: Prone to noise in choppy markets; use alongside longer averages for filtering false signals.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 270.5980517468301
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 269.4153935955181
+        },
+        {
+          "date": "2025-11-20",
+          "value": 268.95437212021653
+        },
+        {
+          "date": "2025-11-19",
+          "value": 269.5553437024869
+        },
+        {
+          "date": "2025-11-18",
+          "value": 269.77653173446316
+        },
+        {
+          "date": "2025-11-17",
+          "value": 270.29576046625357
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 270.92593135762587
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "macd": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "macd",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "macd values from 2025-11-14 to 2025-11-24:",
+      "description": "MACD: Computes momentum via differences of EMAs. Usage: Look for crossovers and divergence as signals of trend changes. Tips: Confirm with other indicators in low-volatility or sideways markets.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 3.476454595571738
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 3.179847731551149
+        },
+        {
+          "date": "2025-11-20",
+          "value": 3.206074092338895
+        },
+        {
+          "date": "2025-11-19",
+          "value": 3.726440938992141
+        },
+        {
+          "date": "2025-11-18",
+          "value": 4.101215730914646
+        },
+        {
+          "date": "2025-11-17",
+          "value": 4.633946466632381
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 5.2444665029509
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "macds": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "macds",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "macds values from 2025-11-14 to 2025-11-24:",
+      "description": "MACD Signal: An EMA smoothing of the MACD line. Usage: Use crossovers with the MACD line to trigger trades. Tips: Should be part of a broader strategy to avoid false positives.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 4.079897725616955
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 4.230758508128259
+        },
+        {
+          "date": "2025-11-20",
+          "value": 4.493486202272536
+        },
+        {
+          "date": "2025-11-19",
+          "value": 4.8153392297559465
+        },
+        {
+          "date": "2025-11-18",
+          "value": 5.087563802446898
+        },
+        {
+          "date": "2025-11-17",
+          "value": 5.33415082032996
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 5.509201908754354
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "macdh": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "macdh",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "macdh values from 2025-11-14 to 2025-11-24:",
+      "description": "MACD Histogram: Shows the gap between the MACD line and its signal. Usage: Visualize momentum strength and spot divergence early. Tips: Can be volatile; complement with additional filters in fast-moving markets.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": -0.6034431300452168
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": -1.0509107765771102
+        },
+        {
+          "date": "2025-11-20",
+          "value": -1.2874121099336415
+        },
+        {
+          "date": "2025-11-19",
+          "value": -1.0888982907638054
+        },
+        {
+          "date": "2025-11-18",
+          "value": -0.9863480715322517
+        },
+        {
+          "date": "2025-11-17",
+          "value": -0.700204353697579
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": -0.2647354058034539
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "rsi": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "rsi",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "rsi values from 2025-11-14 to 2025-11-24:",
+      "description": "RSI: Measures momentum to flag overbought/oversold conditions. Usage: Apply 70/30 thresholds and watch for divergence to signal reversals. Tips: In strong trends, RSI may remain extreme; always cross-check with trend analysis.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 65.17024155883612
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 59.85225010434342
+        },
+        {
+          "date": "2025-11-20",
+          "value": 51.76279872675957
+        },
+        {
+          "date": "2025-11-19",
+          "value": 56.41605454925576
+        },
+        {
+          "date": "2025-11-18",
+          "value": 54.57770462416557
+        },
+        {
+          "date": "2025-11-17",
+          "value": 54.61588244599601
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 65.08491194126498
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "boll": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "boll",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "boll values from 2025-11-14 to 2025-11-24:",
+      "description": "Bollinger Middle: A 20 SMA serving as the basis for Bollinger Bands. Usage: Acts as a dynamic benchmark for price movement. Tips: Combine with the upper and lower bands to effectively spot breakouts or reversals.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 270.3109298706055
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 269.9424118041992
+        },
+        {
+          "date": "2025-11-20",
+          "value": 269.4961868286133
+        },
+        {
+          "date": "2025-11-19",
+          "value": 269.1501159667969
+        },
+        {
+          "date": "2025-11-18",
+          "value": 268.63210144042966
+        },
+        {
+          "date": "2025-11-17",
+          "value": 268.38587646484376
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 268.11217803955077
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "boll_ub": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "boll_ub",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "boll_ub values from 2025-11-14 to 2025-11-24:",
+      "description": "Bollinger Upper Band: Typically 2 standard deviations above the middle line. Usage: Signals potential overbought conditions and breakout zones. Tips: Confirm signals with other tools; prices may ride the band in strong trends.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 275.48367045337665
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 274.4385173501009
+        },
+        {
+          "date": "2025-11-20",
+          "value": 275.00336329876274
+        },
+        {
+          "date": "2025-11-19",
+          "value": 276.17653015845775
+        },
+        {
+          "date": "2025-11-18",
+          "value": 277.2001730529262
+        },
+        {
+          "date": "2025-11-17",
+          "value": 277.3710740644191
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 277.53877067004595
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "boll_lb": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "boll_lb",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "boll_lb values from 2025-11-14 to 2025-11-24:",
+      "description": "Bollinger Lower Band: Typically 2 standard deviations below the middle line. Usage: Indicates potential oversold conditions. Tips: Use additional analysis to avoid false reversal signals.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 265.13818928783434
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 265.4463062582975
+        },
+        {
+          "date": "2025-11-20",
+          "value": 263.9890103584639
+        },
+        {
+          "date": "2025-11-19",
+          "value": 262.123701775136
+        },
+        {
+          "date": "2025-11-18",
+          "value": 260.06402982793315
+        },
+        {
+          "date": "2025-11-17",
+          "value": 259.40067886526845
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 258.6855854090556
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "atr": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "atr",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "atr values from 2025-11-14 to 2025-11-24:",
+      "description": "ATR: Averages true range to measure volatility. Usage: Set stop-loss levels and adjust position sizes based on current market volatility. Tips: It's a reactive measure, so use it as part of a broader risk management strategy.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 5.893780853772676
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 5.877917373023219
+        },
+        {
+          "date": "2025-11-20",
+          "value": 5.740836159830293
+        },
+        {
+          "date": "2025-11-19",
+          "value": 5.4509020761213245
+        },
+        {
+          "date": "2025-11-18",
+          "value": 5.354049046970801
+        },
+        {
+          "date": "2025-11-17",
+          "value": 5.351284809748603
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 5.2490765123614755
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "vwma": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "vwma",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "vwma values from 2025-11-14 to 2025-11-24:",
+      "description": "VWMA: A moving average weighted by volume. Usage: Confirm trends by integrating price action with volume data. Tips: Watch for skewed results from volume spikes; use in combination with other volume analyses.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 270.92484671431566
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 270.45067113349666
+        },
+        {
+          "date": "2025-11-20",
+          "value": 270.32325236927267
+        },
+        {
+          "date": "2025-11-19",
+          "value": 270.6085258876973
+        },
+        {
+          "date": "2025-11-18",
+          "value": 270.75751923240057
+        },
+        {
+          "date": "2025-11-17",
+          "value": 270.82854588624485
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 270.89195617429806
+        }
+      ]
+    },
+    "status_code": 200
+  },
+  "mfi": {
+    "success": true,
+    "data": {
+      "symbol": "AAPL",
+      "indicator": "mfi",
+      "date": "2025-11-24",
+      "lookback_days": 10,
+      "total_values": 11,
+      "header": "mfi values from 2025-11-14 to 2025-11-24:",
+      "description": "MFI: The Money Flow Index is a momentum indicator that uses both price and volume to measure buying and selling pressure. Usage: Identify overbought (>80) or oversold (<20) conditions and confirm the strength of trends or reversals. Tips: Use alongside RSI or MACD to confirm signals; divergence between price and MFI can indicate potential reversals.",
+      "values": [
+        {
+          "date": "2025-11-24",
+          "value": 0.5903144703810885
+        },
+        {
+          "date": "2025-11-23",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-22",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-21",
+          "value": 0.5795243146682248
+        },
+        {
+          "date": "2025-11-20",
+          "value": 0.49723151674853094
+        },
+        {
+          "date": "2025-11-19",
+          "value": 0.527007141691531
+        },
+        {
+          "date": "2025-11-18",
+          "value": 0.5465501562368655
+        },
+        {
+          "date": "2025-11-17",
+          "value": 0.6121122591187798
+        },
+        {
+          "date": "2025-11-16",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-15",
+          "value": "N/A: Not a trading day (weekend or holiday)"
+        },
+        {
+          "date": "2025-11-14",
+          "value": 0.6718114209562356
+        }
+      ]
+    },
+    "status_code": 200
+  }
+}

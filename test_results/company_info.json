@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "AAPL",
+    "company_info": {
+      "Company Name": "Apple Inc.",
+      "Industry": "Consumer Electronics",
+      "Sector": "Technology",
+      "Country": "United States",
+      "Website": "https://www.apple.com"
+    }
+  },
+  "status_code": 200
+}

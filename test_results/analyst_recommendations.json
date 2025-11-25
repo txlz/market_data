@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "AAPL",
+    "majority_recommendation": "buy",
+    "vote_count": 24
+  },
+  "status_code": 200
+}

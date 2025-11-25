@@ -9,6 +9,7 @@ from datetime import datetime
 from enum import Enum
 
 from app.core.y_finance import get_stock_stats_indicators_window
+from app.core.json_utils import parse_indicator_string
 
 router = APIRouter()
 
@@ -31,6 +32,55 @@ class TechnicalIndicator(str, Enum):
 
 # List of supported indicators
 SUPPORTED_INDICATORS = [ind.value for ind in TechnicalIndicator]
+
+@router.get("/{symbol}/all")
+async def get_all_indicators(
+    symbol: str = Path(..., description="Stock ticker symbol"),
+    date: str = Query(..., description="Analysis date in YYYY-MM-DD format"),
+    lookback_days: int = Query(10, ge=1, le=365, description="Number of days to look back")
+):
+    """
+    Get all technical indicators for a stock
+    
+    - **symbol**: Stock ticker symbol (e.g., AAPL, MSFT)
+    - **date**: Analysis date in YYYY-MM-DD format
+    - **lookback_days**: Number of days to look back (1-365, default: 10)
+    
+    Returns: All available technical indicators for the symbol
+    """
+    try:
+        # Validate date format
+        datetime.strptime(date, "%Y-%m-%d")
+        
+        results = {}
+        errors = {}
+        
+        for indicator in SUPPORTED_INDICATORS:
+            try:
+                result = get_stock_stats_indicators_window(
+                    symbol, indicator, date, lookback_days
+                )
+                # Parse the string result into structured JSON
+                parsed_result = parse_indicator_string(result)
+                results[indicator] = parsed_result
+            except Exception as e:
+                errors[indicator] = str(e)
+        
+        return {
+            "symbol": symbol.upper(),
+            "date": date,
+            "lookback_days": lookback_days,
+            "total_indicators": len(results),
+            "indicators": results,
+            "errors": errors if errors else None
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=f"Invalid date format: {str(e)}")
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error retrieving indicators: {str(e)}"
+        )
 
 @router.get("/{symbol}/{indicator}")
 async def get_technical_indicator(
@@ -78,12 +128,18 @@ async def get_technical_indicator(
                 detail=f"No data found for {indicator} on {symbol}"
             )
         
+        # Parse the string result into structured JSON
+        parsed_result = parse_indicator_string(result)
+        
         return {
             "symbol": symbol.upper(),
-            "indicator": indicator,
+            "indicator": indicator.value,
             "date": date,
             "lookback_days": lookback_days,
-            "data": result
+            "total_values": len(parsed_result.get("values", [])),
+            "header": parsed_result.get("header", ""),
+            "description": parsed_result.get("description", ""),
+            "values": parsed_result.get("values", [])
         }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=f"Invalid date format: {str(e)}")
@@ -91,50 +147,4 @@ async def get_technical_indicator(
         raise HTTPException(
             status_code=500, 
             detail=f"Error retrieving indicator {indicator}: {str(e)}"
-        )
-
-@router.get("/{symbol}/all")
-async def get_all_indicators(
-    symbol: str = Path(..., description="Stock ticker symbol"),
-    date: str = Query(..., description="Analysis date in YYYY-MM-DD format"),
-    lookback_days: int = Query(10, ge=1, le=365, description="Number of days to look back")
-):
-    """
-    Get all technical indicators for a stock
-    
-    - **symbol**: Stock ticker symbol (e.g., AAPL, MSFT)
-    - **date**: Analysis date in YYYY-MM-DD format
-    - **lookback_days**: Number of days to look back (1-365, default: 10)
-    
-    Returns: All available technical indicators for the symbol
-    """
-    try:
-        # Validate date format
-        datetime.strptime(date, "%Y-%m-%d")
-        
-        results = {}
-        errors = {}
-        
-        for indicator in SUPPORTED_INDICATORS:
-            try:
-                result = get_stock_stats_indicators_window(
-                    symbol, indicator, date, lookback_days
-                )
-                results[indicator] = result
-            except Exception as e:
-                errors[indicator] = str(e)
-        
-        return {
-            "symbol": symbol.upper(),
-            "date": date,
-            "lookback_days": lookback_days,
-            "indicators": results,
-            "errors": errors if errors else None
-        }
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=f"Invalid date format: {str(e)}")
-    except Exception as e:
-        raise HTTPException(
-            status_code=500, 
-            detail=f"Error retrieving indicators: {str(e)}"
         )
